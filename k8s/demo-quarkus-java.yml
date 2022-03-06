@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: demo-quarkus-java
+  name: demo-quarkus-java
+spec:
+  ports:
+    - name: web
+      port: 8080
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: demo-quarkus-java
+  type: NodePort
